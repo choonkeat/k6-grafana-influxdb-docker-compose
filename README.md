@@ -21,3 +21,7 @@ WARN[0005] The flush operation took higher than the expected set push interval. 
 ```
 
 Occurs on high load (xk6-kafka scripts on > 5 VUs).
+
+https://community.k6.io/t/the-flush-operation-took-higher-than-the-expected-set-push-interval/2469
+
+- [ ] Optimize data that is stored (in `tags`)
