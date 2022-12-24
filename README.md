@@ -6,4 +6,10 @@ This is a repository for designing dashboards and scenarios describing good prac
 
 ## TODO
 
-- [ ] Check InfluxDB limits (requests)
+- [ ] Check InfluxDB limits (requests):
+
+```bash
+ERRO[0079] Couldn't write stats                          error="{\"error\":\"Request Entity Too Large\"}\n" output=InfluxDBv1
+```
+
+Occurs on high load (xk6-kafka scripts on > 5 VUs).
