@@ -3,10 +3,8 @@ import { Trend } from 'k6/metrics';
 import { Httpx } from 'https://jslib.k6.io/httpx/0.0.3/index.js';
 
 
-// trends to hold information about requests based on tags
 const errors = new Trend('errors');
 
-// session object
 const session = new Httpx({
   baseURL: 'http://httpbin.test.k6.io',
   headers: {
