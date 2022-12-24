@@ -1,62 +1,53 @@
-import http from 'k6/http';
-import { check, sleep } from "k6";
+import { check, sleep, group } from "k6";
 import { Trend } from 'k6/metrics';
 import { Httpx } from 'https://jslib.k6.io/httpx/0.0.3/index.js';
 
 
 // trends to hold information about requests based on tags
 const errors = new Trend('errors');
-const httpRequests = new Trend('httpRequests')
 
-// standard options
-export let options = {
-  stages: [
-      { duration: "5s", target: 1 },
-      // { duration: "10s", target: 5 },
-      // { duration: "5s", target: 0 }
-  ]
-};
-
-// user session (Http Request Defaults)
+// session object
 const session = new Httpx({
-  baseURL: 'https://test-api.k6.io',
+  baseURL: 'http://httpbin.test.k6.io',
   headers: {
-    'User-Agent': 'My custom user agent',
     'Content-Type': 'application/x-www-form-urlencoded'
   },
   timeout: 20000
 });
 
-function checkResponse(resp, check, endpoint) {
-  resp.body = 'ds'
-  console.log(resp)
+function checkResponse(response, check, name) {
   if (!check) {
     // couldn't make point from sample: max key length exceeded: 519029 > 65535 - InfluxDB validation
-    const respBody = JSON.stringify(resp.body).slice(0, 5000)
+    const responseBody = JSON.stringify(response.body).slice(0, 5000)
+    const requestBody = JSON.stringify(response.request.body).slice(0, 500)
     errors.add(1, {
-      endpoint: endpoint,
-      status: resp.status,
-      error_code: resp.error_code,
-      body: respBody
-    })
-    httpRequests.add(1, {
-      endpoint: endpoint,
-    })
-  } else {
-    httpRequests.add(1, {
-      endpoint: endpoint,
+      name: name,
+      error_code: response.error_code,
+      response_headers: JSON.stringify(response.headers),
+      response_cookies: JSON.stringify(response.cookies),
+      response_status: response.status,
+      response_body: responseBody,
+      request_headers: JSON.stringify(response.request.headers),
+      request_cookies: JSON.stringify(response.request.cookies),
+      request_method: response.request.method,
+      request_body: requestBody
     })
   }
 }
 
 export default function () {
-  
-  const resp = session.get("/", null, {
-    tags: { endpoint: '/test2' }
-  });
-  const status = check(resp, {
-    'status is 2001': (r) => r.status === 201
+  let name
+  let response
+  let status
+
+  group('get 407 status', function() {
+    name = '/status/<status>'
+    response = session.get("/status/407", null, {
+      tags: { name: name }
+    });
+    status = check(response, {
+      'status is 407': (r) => r.status === 407
+    })
+    checkResponse(response, status, name)
   })
-  checkResponse(resp, status, '/test')
-  sleep(0.2)
 };
