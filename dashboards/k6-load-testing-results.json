@@ -340,6 +340,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:80",
           "alias": "Num Errors",
           "color": "#BF1B00"
         }
@@ -407,11 +408,13 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:87",
           "format": "short",
           "logBase": 1,
           "show": true
         },
         {
+          "$$hashKey": "object:88",
           "format": "short",
           "logBase": 1,
           "show": true
@@ -1868,7 +1871,7 @@
           "groupBy": [
             {
               "params": [
-                "endpoint"
+                "name"
               ],
               "type": "tag"
             }
@@ -1965,6 +1968,19 @@
       "type": "table"
     },
     {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "id": 54,
+      "panels": [],
+      "title": "Request Errors",
+      "type": "row"
+    },
+    {
       "datasource": {
         "type": "influxdb",
         "uid": "P76A45B24F43298D1"
@@ -2000,7 +2016,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 36
       },
       "id": 42,
       "options": {
@@ -2025,13 +2041,13 @@
           "groupBy": [
             {
               "params": [
-                "body"
+                "response_body"
               ],
               "type": "tag"
             },
             {
               "params": [
-                "endpoint"
+                "name"
               ],
               "type": "tag"
             },
@@ -2043,7 +2059,7 @@
             },
             {
               "params": [
-                "status"
+                "response_status"
               ],
               "type": "tag"
             }
@@ -2071,6 +2087,151 @@
         }
       ],
       "title": "Errors",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P76A45B24F43298D1"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "displayMode": "auto",
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 43
+      },
+      "id": 52,
+      "options": {
+        "footer": {
+          "enablePagination": true,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "9.2.5",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P76A45B24F43298D1"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "error_code"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "request_headers"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "request_cookies"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "request_method"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "request_body"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "response_headers"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "response_cookies"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "response_status"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "response_body"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "errors",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Errors Details",
       "type": "table"
     }
   ],
@@ -2146,7 +2307,7 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
