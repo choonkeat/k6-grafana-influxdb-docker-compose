@@ -645,7 +645,7 @@
               }
             ]
           },
-          "unit": "none",
+          "unit": "locale",
           "unitScale": true
         },
         "overrides": []
