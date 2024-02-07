@@ -64,6 +64,12 @@
         "type": "influxdb",
         "uid": "P76A45B24F43298D1"
       },
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -93,7 +99,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -103,7 +109,6 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "Active VUs",
           "datasource": {
             "type": "influxdb",
             "uid": "P76A45B24F43298D1"
@@ -115,6 +120,12 @@
                 "$__interval"
               ],
               "type": "time"
+            },
+            {
+              "params": [
+                "instance_id::tag"
+              ],
+              "type": "tag"
             },
             {
               "params": [
@@ -138,7 +149,7 @@
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "max"
               }
             ]
           ],
@@ -184,6 +195,12 @@
         "type": "influxdb",
         "uid": "P76A45B24F43298D1"
       },
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -214,7 +231,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -305,6 +322,12 @@
         "type": "influxdb",
         "uid": "P76A45B24F43298D1"
       },
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -334,7 +357,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -433,6 +456,12 @@
         "type": "influxdb",
         "uid": "P76A45B24F43298D1"
       },
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -462,7 +491,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -617,7 +646,8 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ms",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -642,9 +672,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -727,7 +759,8 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ms",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -752,9 +785,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -837,7 +872,8 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ms",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -862,9 +898,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -947,7 +985,8 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ms",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -972,9 +1011,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1057,7 +1098,8 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ms",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1082,9 +1124,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1167,7 +1211,8 @@
               }
             ]
           },
-          "unit": "ms"
+          "unit": "ms",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1192,9 +1237,11 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1252,6 +1299,12 @@
         "uid": "P76A45B24F43298D1"
       },
       "description": "Grouped by 1 sec intervals",
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -1282,7 +1335,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1572,7 +1625,8 @@
             "scaleDistribution": {
               "type": "linear"
             }
-          }
+          },
+          "unitScale": true
         },
         "overrides": []
       },
@@ -1624,7 +1678,8 @@
         },
         "showValue": "never",
         "tooltip": {
-          "show": true,
+          "mode": "single",
+          "showColorScale": false,
           "yHistogram": true
         },
         "yAxis": {
@@ -1633,7 +1688,7 @@
           "unit": "ms"
         }
       },
-      "pluginVersion": "9.2.5",
+      "pluginVersion": "10.3.1",
       "targets": [
         {
           "datasource": {
@@ -1732,7 +1787,9 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
             "inspect": false
           },
           "mappings": [],
@@ -1740,8 +1797,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1992,7 +2048,9 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
             "inspect": false
           },
           "mappings": [],
@@ -2000,8 +2058,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2101,7 +2158,9 @@
           },
           "custom": {
             "align": "auto",
-            "displayMode": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
             "inspect": false
           },
           "mappings": [],
@@ -2109,8 +2168,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2236,8 +2294,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 37,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": [
