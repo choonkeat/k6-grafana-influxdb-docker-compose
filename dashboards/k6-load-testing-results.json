@@ -500,7 +500,7 @@
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "unit": "decbytes",
+          "unit": "Bps",
           "unitScale": true
         },
         "overrides": []
@@ -519,11 +519,11 @@
       "legend": {
         "alignAsTable": true,
         "avg": true,
-        "current": false,
+        "current": true,
         "max": true,
         "min": false,
         "show": true,
-        "total": true,
+        "total": false,
         "values": true
       },
       "lines": false,
@@ -540,6 +540,7 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:148",
           "alias": "Num Errors",
           "color": "#BF1B00"
         }
@@ -571,6 +572,8 @@
           "measurement": "data_sent",
           "orderByTime": "ASC",
           "policy": "default",
+          "query": "SELECT sum(\"value\") / 60 FROM \"data_sent\" WHERE $timeFilter GROUP BY time(1m) fill(null)",
+          "rawQuery": true,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
@@ -612,6 +615,8 @@
           "measurement": "data_received",
           "orderByTime": "ASC",
           "policy": "default",
+          "query": "SELECT sum(\"value\") / 60 FROM \"data_received\" WHERE $timeFilter GROUP BY time(1m) fill(null)",
+          "rawQuery": true,
           "refId": "B",
           "resultFormat": "time_series",
           "select": [
@@ -621,10 +626,6 @@
                   "value"
                 ],
                 "type": "field"
-              },
-              {
-                "params": [],
-                "type": "sum"
               }
             ]
           ],
@@ -633,7 +634,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Bandwidth",
+      "title": "Bandwidth per second",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -647,11 +648,13 @@
       },
       "yaxes": [
         {
-          "format": "decbytes",
+          "$$hashKey": "object:47",
+          "format": "Bps",
           "logBase": 1,
           "show": true
         },
         {
+          "$$hashKey": "object:48",
           "format": "short",
           "logBase": 1,
           "show": true
@@ -1835,7 +1838,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 30
       },
       "id": 20,
       "panels": [],
@@ -1873,8 +1876,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2035,7 +2037,7 @@
         "h": 33,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 31
       },
       "id": 31,
       "options": {
@@ -2186,8 +2188,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2308,7 +2309,7 @@
         "h": 33,
         "w": 24,
         "x": 0,
-        "y": 53
+        "y": 64
       },
       "id": 55,
       "options": {
@@ -2379,7 +2380,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 86
+        "y": 97
       },
       "id": 54,
       "panels": [],
@@ -2408,8 +2409,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2425,7 +2425,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 87
+        "y": 98
       },
       "id": 42,
       "options": {
@@ -2522,8 +2522,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2539,7 +2538,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 94
+        "y": 105
       },
       "id": 52,
       "options": {
@@ -2753,6 +2752,6 @@
   "timezone": "browser",
   "title": "k6 Load Testing Results",
   "uid": "k6",
-  "version": 10,
+  "version": 11,
   "weekStart": ""
 }
