@@ -1864,8 +1864,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2177,8 +2176,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2409,8 +2407,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2523,8 +2520,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -2665,12 +2661,10 @@
         "current": {
           "selected": true,
           "text": [
-            "http_req_duration",
-            "http_req_blocked"
+            "http_req_duration"
           ],
           "value": [
-            "http_req_duration",
-            "http_req_blocked"
+            "http_req_duration"
           ]
         },
         "hide": 0,
@@ -2689,7 +2683,7 @@
             "value": "http_req_duration"
           },
           {
-            "selected": true,
+            "selected": false,
             "text": "http_req_blocked",
             "value": "http_req_blocked"
           },
@@ -2758,6 +2752,6 @@
   "timezone": "browser",
   "title": "k6 Load Testing Results",
   "uid": "k6",
-  "version": 14,
+  "version": 15,
   "weekStart": ""
 }
