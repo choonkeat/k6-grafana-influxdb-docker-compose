@@ -1864,7 +1864,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2025,7 +2026,7 @@
             "h": 33,
             "w": 24,
             "x": 0,
-            "y": 31
+            "y": 20
           },
           "id": 31,
           "options": {
@@ -2176,7 +2177,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2297,7 +2299,7 @@
             "h": 33,
             "w": 24,
             "x": 0,
-            "y": 64
+            "y": 53
           },
           "id": 55,
           "options": {
@@ -2407,7 +2409,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2423,7 +2426,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 32
+            "y": 87
           },
           "id": 42,
           "options": {
@@ -2520,7 +2523,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2536,7 +2540,7 @@
             "h": 7,
             "w": 24,
             "x": 0,
-            "y": 39
+            "y": 94
           },
           "id": 52,
           "options": {
@@ -2652,7 +2656,7 @@
       "type": "row"
     }
   ],
-  "refresh": false,
+  "refresh": "30s",
   "schemaVersion": 39,
   "tags": [],
   "templating": {
@@ -2723,8 +2727,8 @@
     ]
   },
   "time": {
-    "from": "2024-02-07T15:17:27.660Z",
-    "to": "2024-02-07T16:31:47.706Z"
+    "from": "now-1h",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -2754,6 +2758,6 @@
   "timezone": "browser",
   "title": "k6 Load Testing Results",
   "uid": "k6",
-  "version": 13,
+  "version": 14,
   "weekStart": ""
 }
