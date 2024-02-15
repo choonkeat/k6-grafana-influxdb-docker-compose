@@ -99,7 +99,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -231,7 +231,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -357,7 +357,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -534,7 +534,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -755,7 +755,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -868,7 +868,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -981,7 +981,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -1094,7 +1094,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -1207,7 +1207,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -1320,7 +1320,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -1414,7 +1414,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1767,7 +1767,7 @@
           "unit": "ms"
         }
       },
-      "pluginVersion": "10.3.1",
+      "pluginVersion": "10.3.3",
       "targets": [
         {
           "datasource": {
@@ -1829,7 +1829,7 @@
       }
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "datasource": {
         "type": "influxdb",
         "uid": "P76A45B24F43298D1"
@@ -1841,528 +1841,7 @@
         "y": 19
       },
       "id": 20,
-      "panels": [
-        {
-          "datasource": {
-            "type": "influxdb",
-            "uid": "P76A45B24F43298D1"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "custom": {
-                "align": "auto",
-                "cellOptions": {
-                  "type": "auto"
-                },
-                "inspect": false
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
-              },
-              "unitScale": true
-            },
-            "overrides": [
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "percentile"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "ms"
-                  },
-                  {
-                    "id": "displayName",
-                    "value": "p(90)"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "percentile_1"
-                },
-                "properties": [
-                  {
-                    "id": "displayName",
-                    "value": "p(95)"
-                  },
-                  {
-                    "id": "unit",
-                    "value": "ms"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "min"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "ms"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "max"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "ms"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "mean"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "ms"
-                  },
-                  {
-                    "id": "displayName",
-                    "value": "avg"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "median"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "ms"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "name"
-                },
-                "properties": [
-                  {
-                    "id": "custom.width",
-                    "value": 572
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "method"
-                },
-                "properties": [
-                  {
-                    "id": "displayName",
-                    "value": "Method"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "name"
-                },
-                "properties": [
-                  {
-                    "id": "displayName",
-                    "value": "URL"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "Time"
-                },
-                "properties": [
-                  {
-                    "id": "custom.hidden",
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "Method"
-                },
-                "properties": [
-                  {
-                    "id": "custom.width",
-                    "value": 69
-                  }
-                ]
-              }
-            ]
-          },
-          "gridPos": {
-            "h": 33,
-            "w": 24,
-            "x": 0,
-            "y": 20
-          },
-          "id": 31,
-          "options": {
-            "cellHeight": "sm",
-            "footer": {
-              "countRows": false,
-              "enablePagination": false,
-              "fields": "",
-              "reducer": [
-                "sum"
-              ],
-              "show": false
-            },
-            "showHeader": true,
-            "sortBy": []
-          },
-          "pluginVersion": "10.3.1",
-          "targets": [
-            {
-              "datasource": {
-                "type": "influxdb",
-                "uid": "P76A45B24F43298D1"
-              },
-              "groupBy": [
-                {
-                  "params": [
-                    "name"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "method::tag"
-                  ],
-                  "type": "tag"
-                }
-              ],
-              "measurement": "http_req_duration",
-              "orderByTime": "ASC",
-              "policy": "default",
-              "query": "SELECT count(\"value\"), min(\"value\"), median(\"value\"), mean(\"value\"), percentile(\"value\", 90), percentile(\"value\", 95), max(\"value\") FROM \"http_req_duration\" WHERE $timeFilter GROUP BY \"name\", \"method\"::tag",
-              "rawQuery": true,
-              "refId": "A",
-              "resultFormat": "table",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "min"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "max"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "mean"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "median"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [
-                      "90"
-                    ],
-                    "type": "percentile"
-                  }
-                ],
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [
-                      "95"
-                    ],
-                    "type": "percentile"
-                  }
-                ]
-              ],
-              "tags": []
-            }
-          ],
-          "title": "Latencies by URL",
-          "type": "table"
-        },
-        {
-          "datasource": {
-            "type": "influxdb",
-            "uid": "P76A45B24F43298D1"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "custom": {
-                "align": "auto",
-                "cellOptions": {
-                  "type": "auto"
-                },
-                "inspect": false
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
-              },
-              "unitScale": true
-            },
-            "overrides": [
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "sum"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "none"
-                  },
-                  {
-                    "id": "displayName",
-                    "value": "Errors"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "name"
-                },
-                "properties": [
-                  {
-                    "id": "displayName",
-                    "value": "URL"
-                  },
-                  {
-                    "id": "unit",
-                    "value": "string"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "method"
-                },
-                "properties": [
-                  {
-                    "id": "unit",
-                    "value": "string"
-                  },
-                  {
-                    "id": "displayName",
-                    "value": "Method"
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "Time"
-                },
-                "properties": [
-                  {
-                    "id": "custom.hidden",
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "Method"
-                },
-                "properties": [
-                  {
-                    "id": "custom.width",
-                    "value": 75
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "sum_count"
-                },
-                "properties": [
-                  {
-                    "id": "displayName",
-                    "value": "Error rate"
-                  },
-                  {
-                    "id": "unit",
-                    "value": "percent"
-                  },
-                  {
-                    "id": "decimals",
-                    "value": 3
-                  }
-                ]
-              },
-              {
-                "matcher": {
-                  "id": "byName",
-                  "options": "count"
-                },
-                "properties": [
-                  {
-                    "id": "displayName",
-                    "value": "Requests"
-                  }
-                ]
-              }
-            ]
-          },
-          "gridPos": {
-            "h": 33,
-            "w": 24,
-            "x": 0,
-            "y": 53
-          },
-          "id": 55,
-          "options": {
-            "cellHeight": "sm",
-            "footer": {
-              "countRows": false,
-              "enablePagination": false,
-              "fields": "",
-              "reducer": [
-                "sum"
-              ],
-              "show": false
-            },
-            "showHeader": true,
-            "sortBy": []
-          },
-          "pluginVersion": "10.3.1",
-          "targets": [
-            {
-              "datasource": {
-                "type": "influxdb",
-                "uid": "P76A45B24F43298D1"
-              },
-              "groupBy": [
-                {
-                  "params": [
-                    "name"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "method::tag"
-                  ],
-                  "type": "tag"
-                }
-              ],
-              "measurement": "http_req_failed",
-              "orderByTime": "ASC",
-              "policy": "default",
-              "query": "SELECT count(\"value\"), sum(\"value\"), sum(\"value\")/count(\"value\") FROM \"http_req_failed\" WHERE $timeFilter GROUP BY \"name\", \"method\"::tag",
-              "rawQuery": true,
-              "refId": "A",
-              "resultFormat": "table",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "sum"
-                  }
-                ]
-              ],
-              "tags": []
-            }
-          ],
-          "title": "Errors by URL",
-          "type": "table"
-        }
-      ],
+      "panels": [],
       "targets": [
         {
           "datasource": {
@@ -2376,283 +1855,842 @@
       "type": "row"
     },
     {
-      "collapsed": true,
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P76A45B24F43298D1"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentile"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              },
+              {
+                "id": "displayName",
+                "value": "p(90)"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentile_1"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "p(95)"
+              },
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "min"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "max"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "mean"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              },
+              {
+                "id": "displayName",
+                "value": "avg"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "median"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 572
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "method"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Method"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "URL"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.hidden",
+                "value": true
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Method"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 69
+              }
+            ]
+          }
+        ]
+      },
       "gridPos": {
-        "h": 1,
+        "h": 45,
         "w": 24,
         "x": 0,
         "y": 20
       },
-      "id": 54,
-      "panels": [
-        {
-          "datasource": {
-            "type": "influxdb",
-            "uid": "P76A45B24F43298D1"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "custom": {
-                "align": "auto",
-                "cellOptions": {
-                  "type": "auto"
-                },
-                "inspect": false
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
-              },
-              "unitScale": true
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 7,
-            "w": 24,
-            "x": 0,
-            "y": 87
-          },
-          "id": 42,
-          "options": {
-            "cellHeight": "sm",
-            "footer": {
-              "countRows": false,
-              "enablePagination": true,
-              "fields": "",
-              "reducer": [
-                "sum"
-              ],
-              "show": false
-            },
-            "showHeader": true,
-            "sortBy": []
-          },
-          "pluginVersion": "10.3.1",
-          "targets": [
-            {
-              "datasource": {
-                "type": "influxdb",
-                "uid": "P76A45B24F43298D1"
-              },
-              "groupBy": [
-                {
-                  "params": [
-                    "response_body"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "name"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "error_code"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "response_status"
-                  ],
-                  "type": "tag"
-                }
-              ],
-              "measurement": "errors",
-              "orderByTime": "ASC",
-              "policy": "default",
-              "refId": "A",
-              "resultFormat": "table",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "sum"
-                  }
-                ]
-              ],
-              "tags": []
-            }
+      "id": 31,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
           ],
-          "title": "Errors",
-          "type": "table"
+          "show": false
         },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
         {
           "datasource": {
             "type": "influxdb",
             "uid": "P76A45B24F43298D1"
           },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "custom": {
-                "align": "auto",
-                "cellOptions": {
-                  "type": "auto"
-                },
-                "inspect": false
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green"
-                  },
-                  {
-                    "color": "red",
-                    "value": 80
-                  }
-                ]
-              },
-              "unitScale": true
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 7,
-            "w": 24,
-            "x": 0,
-            "y": 94
-          },
-          "id": 52,
-          "options": {
-            "cellHeight": "sm",
-            "footer": {
-              "countRows": false,
-              "enablePagination": true,
-              "fields": "",
-              "reducer": [
-                "sum"
-              ],
-              "show": false
-            },
-            "showHeader": true,
-            "sortBy": []
-          },
-          "pluginVersion": "10.3.1",
-          "targets": [
+          "groupBy": [
             {
-              "datasource": {
-                "type": "influxdb",
-                "uid": "P76A45B24F43298D1"
-              },
-              "groupBy": [
-                {
-                  "params": [
-                    "name"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "error_code"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "request_headers"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "request_cookies"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "request_method"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "request_body"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "response_headers"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "response_cookies"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "response_status"
-                  ],
-                  "type": "tag"
-                },
-                {
-                  "params": [
-                    "response_body"
-                  ],
-                  "type": "tag"
-                }
+              "params": [
+                "name"
               ],
-              "measurement": "errors",
-              "orderByTime": "ASC",
-              "policy": "default",
-              "refId": "A",
-              "resultFormat": "table",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "value"
-                    ],
-                    "type": "field"
-                  },
-                  {
-                    "params": [],
-                    "type": "sum"
-                  }
-                ]
+              "type": "tag"
+            },
+            {
+              "params": [
+                "method::tag"
               ],
-              "tags": []
+              "type": "tag"
             }
           ],
-          "title": "Errors Details",
-          "type": "table"
+          "measurement": "http_req_duration",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT count(\"value\"), min(\"value\"), median(\"value\"), mean(\"value\"), percentile(\"value\", 90), percentile(\"value\", 95), max(\"value\") FROM \"http_req_duration\" WHERE $timeFilter AND \"method\"::tag = 'GET' GROUP BY \"name\", \"method\"::tag",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "min"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "max"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "median"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  "90"
+                ],
+                "type": "percentile"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  "95"
+                ],
+                "type": "percentile"
+              }
+            ]
+          ],
+          "tags": []
         }
       ],
-      "title": "Request Errors",
-      "type": "row"
+      "title": "Latencies by GET URL",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P76A45B24F43298D1"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentile"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              },
+              {
+                "id": "displayName",
+                "value": "p(90)"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "percentile_1"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "p(95)"
+              },
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "min"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "max"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "mean"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              },
+              {
+                "id": "displayName",
+                "value": "avg"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "median"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "ms"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 572
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "method"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Method"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "URL"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.hidden",
+                "value": true
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Method"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 69
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 24,
+        "x": 0,
+        "y": 65
+      },
+      "id": 56,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P76A45B24F43298D1"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "method::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "http_req_duration",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT count(\"value\"), min(\"value\"), median(\"value\"), mean(\"value\"), percentile(\"value\", 90), percentile(\"value\", 95), max(\"value\") FROM \"http_req_duration\" WHERE $timeFilter AND \"method\"::tag = 'POST' GROUP BY \"name\", \"method\"::tag",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "min"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "max"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "median"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  "90"
+                ],
+                "type": "percentile"
+              }
+            ],
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [
+                  "95"
+                ],
+                "type": "percentile"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Latencies by POST URL",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P76A45B24F43298D1"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sum"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "none"
+              },
+              {
+                "id": "displayName",
+                "value": "Errors"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "name"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "URL"
+              },
+              {
+                "id": "unit",
+                "value": "string"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "method"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "string"
+              },
+              {
+                "id": "displayName",
+                "value": "Method"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Time"
+            },
+            "properties": [
+              {
+                "id": "custom.hidden",
+                "value": true
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Method"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 75
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sum_count"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Error rate"
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              },
+              {
+                "id": "decimals",
+                "value": 3
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "count"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Requests"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 57,
+        "w": 24,
+        "x": 0,
+        "y": 79
+      },
+      "id": 55,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "enablePagination": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "10.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P76A45B24F43298D1"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "name"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "method::tag"
+              ],
+              "type": "tag"
+            }
+          ],
+          "measurement": "http_req_failed",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT count(\"value\"), sum(\"value\"), sum(\"value\")/count(\"value\") FROM \"http_req_failed\" WHERE $timeFilter GROUP BY \"name\", \"method\"::tag",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "table",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "sum"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "title": "Errors by URL",
+      "type": "table"
     }
   ],
-  "refresh": "30s",
+  "refresh": false,
   "schemaVersion": 39,
   "tags": [],
   "templating": {
@@ -2752,6 +2790,6 @@
   "timezone": "browser",
   "title": "k6 Load Testing Results",
   "uid": "k6",
-  "version": 15,
+  "version": 1,
   "weekStart": ""
 }
