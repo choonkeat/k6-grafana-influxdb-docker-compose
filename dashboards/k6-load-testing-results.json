@@ -1963,7 +1963,7 @@
             "h": 14,
             "w": 24,
             "x": 0,
-            "y": 20
+            "y": 28
           },
           "id": 56,
           "options": {
@@ -2276,7 +2276,7 @@
             "h": 14,
             "w": 24,
             "x": 0,
-            "y": 34
+            "y": 42
           },
           "id": 110,
           "options": {
@@ -2479,6 +2479,46 @@
                     "value": "Error rate"
                   }
                 ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Time"
+                },
+                "properties": [
+                  {
+                    "id": "custom.hidden",
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "method"
+                },
+                "properties": [
+                  {
+                    "id": "custom.width",
+                    "value": 90
+                  },
+                  {
+                    "id": "displayName",
+                    "value": "Method"
+                  }
+                ]
+              },
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "name"
+                },
+                "properties": [
+                  {
+                    "id": "displayName",
+                    "value": "URL"
+                  }
+                ]
               }
             ]
           },
@@ -2486,7 +2526,7 @@
             "h": 13,
             "w": 24,
             "x": 0,
-            "y": 49
+            "y": 57
           },
           "id": 113,
           "options": {
@@ -2607,7 +2647,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {
@@ -2638,6 +2678,6 @@
   "timezone": "browser",
   "title": "k6 Load Testing Results",
   "uid": "k6",
-  "version": 2,
+  "version": 4,
   "weekStart": ""
 }
