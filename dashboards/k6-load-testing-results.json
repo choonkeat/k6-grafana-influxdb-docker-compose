@@ -676,7 +676,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Requests per Second",
+      "title": "Requests per $__interval",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -849,7 +849,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Errors Per Second",
+      "title": "Errors per $__interval",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1025,7 +1025,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Bandwidth per second",
+      "title": "Bandwidth",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -3089,6 +3089,6 @@
   "timezone": "browser",
   "title": "k6 Load Testing Results",
   "uid": "k6",
-  "version": 7,
+  "version": 1,
   "weekStart": ""
 }
