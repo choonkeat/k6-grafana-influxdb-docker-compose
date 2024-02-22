@@ -1025,7 +1025,7 @@
       ],
       "thresholds": [],
       "timeRegions": [],
-      "title": "Bandwidth",
+      "title": "Bandwidth per 1s",
       "tooltip": {
         "shared": true,
         "sort": 0,
